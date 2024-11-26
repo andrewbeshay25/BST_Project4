@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a32ef0f-a2d6-4d30-a767-014361ec09c2" name="Changes" comment="Initial Commit" />
+    <list default="true" id="3a32ef0f-a2d6-4d30-a767-014361ec09c2" name="Changes" comment="Initial Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project 4/BinarySearchTree$InOrderIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project 4/BinarySearchTree$InOrderIterator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project 4/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project 4/BinarySearchTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project 4/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project 4/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +35,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/andrewbeshay25/BST-CS114-Project4.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/andrewbeshay25/BST_Project4.git&quot;,
     &quot;accountId&quot;: &quot;e5f77ba6-d36e-4052-a902-68908f32117a&quot;
   }
 }</component>
@@ -43,15 +50,34 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main 5.executor": "Debug",
+    "Application.Main 10,000.executor": "Run",
+    "Application.Main 10.executor": "Run",
+    "Application.Main 5.executor": "Run",
     "Application.Main 50.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "A:/IntelliJ Projects/Project 4"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main 5">
+  <component name="RunManager" selected="Application.Main 10,000">
+    <configuration name="Main 10" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Project 4" />
+      <option name="PROGRAM_PARAMETERS" value="10" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main 10,000" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Project 4" />
+      <option name="PROGRAM_PARAMETERS" value="10000" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main 5" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Project 4" />
@@ -69,8 +95,10 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main 10,000" />
       <item itemvalue="Application.Main 50" />
       <item itemvalue="Application.Main 5" />
+      <item itemvalue="Application.Main 10" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -98,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731646265359</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1732222424828</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732222424828</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

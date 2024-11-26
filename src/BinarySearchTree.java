@@ -18,23 +18,46 @@ public class BinarySearchTree<E extends Comparable<? super E>> extends BinaryTre
     private Node<E> insertRecursively(Node<E> root, E data){
         if(root == null){
             Node<E> newNode = new Node<E>(data);
-
             return newNode;
+        } else if (root.data.compareTo(data) > 0) {
+            root.left = insertRecursively(root.left, data);
+        }else if (root.data.compareTo(data) <= 0) {
+            root.right = insertRecursively(root.right, data);
         }
-        if(root.data.compareTo(data) > 1){
-            return insertRecursively(root.left, data);
-        } else {
-            return insertRecursively(root.right, data);
-        }
+        return root;
     }
+
     @Override
     public void remove(E data) {
+        Node<E> iop = findIOP(root);
 
+
+    }
+    private Node<E> findIOP(Node<E> curr) {
+        curr = curr.left;
+        while (curr.right != null) {
+            curr = curr.right;
+        }
+        return curr;
     }
 
     @Override
     public boolean search(E data) {
-        return false;
+       return searchRecursively(root, data);
+    }
+
+    private boolean searchRecursively(Node<E> root, E data){
+        if (data == null || root == null){
+            return false;
+        }
+
+        if(root.data.compareTo(data) == 0){
+            return true;
+        } else if (data.compareTo(root.data) > 0) {
+            return searchRecursively(root.right, data);
+        } else{
+            return searchRecursively(root.left, data);
+        }
     }
 
     @Override
