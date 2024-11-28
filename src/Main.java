@@ -1,6 +1,7 @@
 import java.util.Iterator;
 import java.util.Random;
 import java.util.Vector;
+
 public class Main {
     public static void main(String[] args) {
         BinaryTree<Integer> tree = new BinarySearchTree<Integer>();
@@ -13,13 +14,13 @@ public class Main {
             int n = rand.nextInt(num);
             tree.insert(n);
             System.out.print(n + ": ");
-//            for (Integer j : tree) {
-//                System.out.print(j + " ");
-//            }
+            for (Integer j : tree) {
+                System.out.print(j + " ");
+            }
             System.out.println();
         }
         stop = System.currentTimeMillis();
-        System.out.println("Time: " + (stop-start));
+        System.out.println("Time: " + (stop - start));
 // System.out.println("height: " + ((BinarySearchTree)tree).height());
         rand = new Random(5);
         System.out.println("search");
@@ -30,22 +31,22 @@ public class Main {
             System.out.println(n + (tree.search(n) ? " " : " not ") + "found");
         }
 
-        stop = System.currentTimeMillis();
-        System.out.println(stop-start);
-//// rand = new Random(1);
-//        System.out.println("remove");
-//        start = System.currentTimeMillis();
+                    stop = System.currentTimeMillis();
+        System.out.println(stop - start);
+        rand = new Random(1);
+        System.out.println("remove");
+        start = System.currentTimeMillis();
 //        for (int i = 0; i < num; ++i) {
 //            int n = rand.nextInt(num);
-//            tree.remove(n);
-//            System.out.print(n + ": ");
-//            for (Integer j : tree) {
-//                System.out.print(j + " ");
-//            }
-//            System.out.println();
+        tree.remove(4);
+            System.out.print(4 + ": ");
+            for (Integer j : tree) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
 //        }
-//        stop = System.currentTimeMillis();
-//        System.out.println(stop-start);
-//        System.out.println(tree.root == null);
+        stop = System.currentTimeMillis();
+        System.out.println(stop - start);
+        System.out.println(tree.root == null);
     }
 }

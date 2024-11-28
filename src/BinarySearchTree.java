@@ -29,10 +29,43 @@ public class BinarySearchTree<E extends Comparable<? super E>> extends BinaryTre
 
     @Override
     public void remove(E data) {
-        Node<E> iop = findIOP(root);
+     if (search(data)){
+         Node<E>[] arr = getNode(root, data, root);
+         Node<E> curr = arr[0];
+         Node<E> parent = arr[1];
 
+         System.out.println(curr.data + " CHILD OF " + parent.data);
+
+         if(curr.right == null && curr.left==null){
+             // leaf node
+             removeLeaf(curr);
+         } else if(curr.right == null || curr.left==null){
+             // one child node
+             removeOneChild(curr, parent);
+         }
+     }
+    }
+
+    private void removeLeaf(Node<E> curr){
+        curr = null;
+    }
+
+    private void removeOneChild(Node<E> curr, Node<E> parent){
 
     }
+
+    private Node<E>[] getNode(Node<E> curr, E data, Node<E> parent) {
+        if(curr.data.compareTo(data) == 0){
+            return new Node[] {curr, parent};
+        }
+        if(curr.data.compareTo(data) > 0){
+            return getNode(curr.left, data, curr);
+        } else{
+            return getNode(curr.right, data, curr);
+        }
+    }
+
+
     private Node<E> findIOP(Node<E> curr) {
         curr = curr.left;
         while (curr.right != null) {
