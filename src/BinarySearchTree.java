@@ -17,8 +17,7 @@ public class BinarySearchTree<E extends Comparable<? super E>> extends BinaryTre
 
     private Node<E> insertRecursively(Node<E> root, E data){
         if(root == null){
-            Node<E> newNode = new Node<E>(data);
-            return newNode;
+            return new Node<E>(data);
         } else if (root.data.compareTo(data) > 0) {
             root.left = insertRecursively(root.left, data);
         }else if (root.data.compareTo(data) <= 0) {
@@ -29,34 +28,48 @@ public class BinarySearchTree<E extends Comparable<? super E>> extends BinaryTre
 
     @Override
     public void remove(E data) {
-     if (search(data)){
-         Node<E>[] arr = getNode(root, data, root);
-         Node<E> curr = arr[0];
-         Node<E> parent = arr[1];
-
-         System.out.println(curr.data + " CHILD OF " + parent.data);
-
-         if(curr.right == null && curr.left==null){
-             // leaf node
-             removeLeaf(curr);
-         } else if(curr.right == null || curr.left==null){
-             // one child node
-             removeOneChild(curr, parent);
-         }
-     }
+        root = removeRecursively(data, root);
     }
+    private Node<E> removeRecursively(E data, Node<E> curr){
+        if(curr == null){
+            return null;
+        }
 
-    private void removeLeaf(Node<E> curr){
-        curr = null;
+        if(curr.data.compareTo(data) > 0){
+            curr.left = removeRecursively(data, curr.left);
+        } else if (curr.data.compareTo(data) < 0) {
+            curr.right =removeRecursively(data, curr.right);
+        } else{
+            if(curr.left == null && curr.right == null){
+                // leaf node
+                return null;
+            } else if (curr.left == null){
+                // node with right child
+                return curr.right;
+            } else if (curr.right == null){
+                // node with left child
+                return curr.left;
+            } else{
+                // node with both children
+                Node<E> iop = findIOP(curr);
+            }
+        }
+        return curr;
     }
 
     private void removeOneChild(Node<E> curr, Node<E> parent){
-
+        if(parent.right.data.compareTo(curr.data) == 0){
+            parent.right = null;
+            System.out.println("REMOVED right child");
+        } else{
+            parent.left = null;
+            System.out.println("REMOVED left child");
+        }
     }
 
-    private Node<E>[] getNode(Node<E> curr, E data, Node<E> parent) {
+    private Node<E>[] getNode(Node<E> curr, E data, Node<E> root) {
         if(curr.data.compareTo(data) == 0){
-            return new Node[] {curr, parent};
+            return new Node[] {curr, root};
         }
         if(curr.data.compareTo(data) > 0){
             return getNode(curr.left, data, curr);

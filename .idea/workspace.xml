@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project 4/BinarySearchTree$InOrderIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project 4/BinarySearchTree$InOrderIterator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project 4/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project 4/BinarySearchTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project 4/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project 4/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -36,7 +35,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/andrewbeshay25/BST_Project4.git&quot;,
-    &quot;accountId&quot;: &quot;e5f77ba6-d36e-4052-a902-68908f32117a&quot;
+    &quot;accountId&quot;: &quot;547f3d8c-28fe-42b4-b968-f8ba178c9e3d&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -48,20 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main 10,000.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main 10.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main 5.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main 50.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;A:/IntelliJ Projects/Project 4&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main 10,000.executor": "Run",
+    "Application.Main 10.executor": "Run",
+    "Application.Main 5.executor": "Run",
+    "Application.Main 50.executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "A:/IntelliJ Projects/Project 4"
   }
-}</component>
-  <component name="RunManager" selected="Application.Main 10">
+}]]></component>
+  <component name="RunManager" selected="Application.Main 5">
     <configuration name="Main 10" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Project 4" />
@@ -187,5 +186,8 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Implemented recursive insertion and searching." />
     <option name="LAST_COMMIT_MESSAGE" value="Implemented recursive insertion and searching." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BST_Project4$Main_5.ic" NAME="Main 5 Coverage Results" MODIFIED="1733763034695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

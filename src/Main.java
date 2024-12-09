@@ -31,7 +31,7 @@ public class Main {
             System.out.println(n + (tree.search(n) ? " " : " not ") + "found");
         }
 
-                    stop = System.currentTimeMillis();
+        stop = System.currentTimeMillis();
         System.out.println(stop - start);
         rand = new Random(1);
         System.out.println("remove");
