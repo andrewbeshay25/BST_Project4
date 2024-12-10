@@ -18,9 +18,12 @@ public class BinarySearchTree<E extends Comparable<? super E>> extends BinaryTre
     private Node<E> insertRecursively(Node<E> root, E data){
         if(root == null){
             return new Node<E>(data);
-        } else if (root.data.compareTo(data) > 0) {
+        }
+
+        int compare = root.data.compareTo(data);
+        if (compare > 0) {
             root.left = insertRecursively(root.left, data);
-        }else if (root.data.compareTo(data) <= 0) {
+        } else {
             root.right = insertRecursively(root.right, data);
         }
         return root;
@@ -35,10 +38,11 @@ public class BinarySearchTree<E extends Comparable<? super E>> extends BinaryTre
             return null;
         }
 
-        if(curr.data.compareTo(data) > 0){
+        int compare = curr.data.compareTo(data);
+        if (compare > 0) {
             curr.left = removeRecursively(data, curr.left);
-        } else if (curr.data.compareTo(data) < 0) {
-            curr.right =removeRecursively(data, curr.right);
+        } else if(compare < 0) {
+            curr.right = removeRecursively(data, curr.right);
         } else{
             if(curr.left == null && curr.right == null){
                 // leaf node
@@ -52,32 +56,12 @@ public class BinarySearchTree<E extends Comparable<? super E>> extends BinaryTre
             } else{
                 // node with both children
                 Node<E> iop = findIOP(curr);
+                curr.data = iop.data;
+                curr.left = removeRecursively(iop.data, curr.left);
             }
         }
         return curr;
     }
-
-    private void removeOneChild(Node<E> curr, Node<E> parent){
-        if(parent.right.data.compareTo(curr.data) == 0){
-            parent.right = null;
-            System.out.println("REMOVED right child");
-        } else{
-            parent.left = null;
-            System.out.println("REMOVED left child");
-        }
-    }
-
-    private Node<E>[] getNode(Node<E> curr, E data, Node<E> root) {
-        if(curr.data.compareTo(data) == 0){
-            return new Node[] {curr, root};
-        }
-        if(curr.data.compareTo(data) > 0){
-            return getNode(curr.left, data, curr);
-        } else{
-            return getNode(curr.right, data, curr);
-        }
-    }
-
 
     private Node<E> findIOP(Node<E> curr) {
         curr = curr.left;
@@ -97,9 +81,11 @@ public class BinarySearchTree<E extends Comparable<? super E>> extends BinaryTre
             return false;
         }
 
-        if(root.data.compareTo(data) == 0){
+        int compare = root.data.compareTo(data);
+
+        if(compare == 0){
             return true;
-        } else if (data.compareTo(root.data) > 0) {
+        } else if (compare > 0) {
             return searchRecursively(root.right, data);
         } else{
             return searchRecursively(root.left, data);
