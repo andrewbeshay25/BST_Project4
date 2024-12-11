@@ -15,18 +15,18 @@ public class BinarySearchTree<E extends Comparable<? super E>> extends BinaryTre
         root = insertRecursively(root, data);
     }
 
-    private Node<E> insertRecursively(Node<E> root, E data){
-        if(root == null){
+    private Node<E> insertRecursively(Node<E> curr, E data){
+        if(curr == null){
             return new Node<E>(data);
         }
 
-        int compare = root.data.compareTo(data);
+        int compare = curr.data.compareTo(data);
         if (compare > 0) {
-            root.left = insertRecursively(root.left, data);
+            curr.left = insertRecursively(curr.left, data);
         } else {
-            root.right = insertRecursively(root.right, data);
+            curr.right = insertRecursively(curr.right, data);
         }
-        return root;
+        return curr;
     }
 
     @Override
@@ -85,7 +85,7 @@ public class BinarySearchTree<E extends Comparable<? super E>> extends BinaryTre
 
         if(compare == 0){
             return true;
-        } else if (compare > 0) {
+        } else if (compare < 0) {
             return searchRecursively(root.right, data);
         } else{
             return searchRecursively(root.left, data);
